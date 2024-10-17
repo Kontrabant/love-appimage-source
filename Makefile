@@ -83,7 +83,7 @@ endif
 override SDL3_PATH := SDL3-$(SDL3_BRANCH)
 
 $(SDL3_PATH)/CMakeLists.txt:
-	git clone --depth 4000 -b $(SDL3_BRANCH) https://github.com/libsdl-org/SDL $(SDL3_PATH)
+	git clone --depth 4000 -b $(SDL3_BRANCH) https://github.com/kontrabant/SDL $(SDL3_PATH)
 	cd $(SDL3_PATH) && git checkout $(SDL3_REV)
 
 $(SDL3_PATH)/build/CMakeCache.txt: $(CMAKE) $(SDL3_PATH)/CMakeLists.txt
